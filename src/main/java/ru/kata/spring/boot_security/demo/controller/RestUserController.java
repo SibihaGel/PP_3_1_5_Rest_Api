@@ -1,5 +1,7 @@
 package ru.kata.spring.boot_security.demo.controller;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +15,7 @@ import java.util.List;
 public class RestUserController {
     private final UserService userService;
 
+    @Autowired
     public RestUserController(UserService userService) {
         this.userService = userService;
     }
